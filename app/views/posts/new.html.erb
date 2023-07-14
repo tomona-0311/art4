@@ -1,0 +1,27 @@
+<h3>作品登録</h3>
+
+<%= form_with model: @display, local: true  do |f| %>
+
+<table>
+<tr>
+
+<th><%=f.label :image,"作品画像"%></th>
+<td><%=f.file_field :image,placeholder:"作品を添付" %></td>
+
+
+<th><%=f.label :display_name,"タイトル名"%></th>
+<td><%=f.text_field :display_name,placeholder:"タイトルを入力" %></td>
+
+
+<th><%=f.label :introduction,"作品紹介"%></th>
+<td><%=f.text_field :introduction,placeholder:"作品の紹介文を入力" %></td>
+
+</tr>
+</table>
+
+
+<ul>
+<li><%=f.submit"確認画面へ"%></li>
+</ul>
+
+<%end%>
